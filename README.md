@@ -2,6 +2,8 @@
 
 Bot Telegram completo per tracciare e gestire le vendite giornaliere con MongoDB.
 
+**🚀 Supporta sia deploy locale che su Vercel (serverless)!**
+
 ## 📋 Funzionalità
 
 - ✅ Aggiungi articoli al catalogo
@@ -13,6 +15,27 @@ Bot Telegram completo per tracciare e gestire le vendite giornaliere con MongoDB
 - ✅ Interface intuitiva con pulsanti inline
 
 ## 🚀 Installazione
+
+### ⚡ Deploy Rapido su Vercel (Consigliato)
+
+**Deploy il bot su Vercel gratuitamente in 5 minuti!**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-repo/telegram-sales-bot)
+
+📖 **[Guida Completa Deploy Vercel →](DEPLOY.md)**
+
+**Vantaggi:**
+- ✅ Hosting gratuito
+- ✅ Sempre online 24/7
+- ✅ Auto-scaling
+- ✅ HTTPS incluso
+- ✅ Deploy automatici da GitHub
+
+---
+
+### 💻 Deploy Locale (per sviluppo)
+
+Usa questa opzione se vuoi eseguire il bot sul tuo computer/server.
 
 ### 1. Prerequisiti
 
@@ -105,15 +128,35 @@ npm run dev
 
 ```
 telegram-sales-bot/
-├── index.js              # File principale del bot
+├── api/
+│   └── webhook.js        # Handler webhook per Vercel
 ├── models/
 │   ├── Product.js        # Schema MongoDB per i prodotti
 │   └── Sale.js          # Schema MongoDB per le vendite
+├── index.js              # File principale del bot (polling - locale)
+├── setup-webhook.js      # Script configurazione webhook
+├── test-db.js           # Test connessione MongoDB
 ├── package.json          # Dipendenze del progetto
+├── vercel.json          # Configurazione Vercel
 ├── .env.example         # Template variabili d'ambiente
 ├── .env                 # Tue variabili d'ambiente (non committare!)
-└── README.md            # Questo file
+├── README.md            # Questo file
+└── DEPLOY.md            # Guida deploy Vercel
 ```
+
+## 🔀 Differenze Locale vs Vercel
+
+| Caratteristica | Locale | Vercel |
+|----------------|--------|--------|
+| **File principale** | `index.js` | `api/webhook.js` |
+| **Modalità** | Polling | Webhook |
+| **Comando avvio** | `npm start` | Deploy automatico |
+| **Hosting** | Tuo server/PC | Cloud Vercel |
+| **Costo** | Dipende dal server | Gratis |
+| **Uptime** | Quando acceso | 24/7 |
+| **Setup** | Più semplice | Richiede webhook |
+
+**💡 Consiglio:** Usa locale per sviluppo/test, Vercel per produzione.
 
 ## 🔧 Configurazione MongoDB
 

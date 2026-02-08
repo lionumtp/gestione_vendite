@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test-db": "node test-db.js"
+    "test-db": "node test-db.js",
+    "setup-webhook": "node setup-webhook.js"
   },
   "keywords": [
     "telegram",
