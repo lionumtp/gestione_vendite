@@ -20,7 +20,7 @@ Bot Telegram completo per tracciare e gestire le vendite giornaliere con MongoDB
 
 **Deploy il bot su Vercel gratuitamente in 5 minuti!**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-repo/telegram-sales-bot)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lionumtp/gestione_vendite)
 
 📖 **[Guida Completa Deploy Vercel →](DEPLOY.md)**
 
